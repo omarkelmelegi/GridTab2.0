@@ -15,10 +15,10 @@
 </head>
 <body>
 <h1>Grid Tab — Privacy Policy</h1>
-<p class="meta">Last updated: August 2026</p>
+<p class="meta">Last updated: September 2026</p>
 
 <h2>Overview</h2>
-<p>Grid Tab is a Chrome browser extension that replaces your new tab page with a customisable dashboard. Grid Tab has <strong>no backend server of its own, no analytics, and no tracking</strong>. Your content stays in your browser. The only exceptions — Chrome account sync and Google's public favicon service — are described below.</p>
+<p>Grid Tab is a Chrome browser extension that replaces your new tab page with a customisable dashboard. Grid Tab has <strong>no backend server of its own, no analytics, and no tracking</strong>. Your content stays in your browser. The only exceptions — Chrome account sync, Google's public favicon service, and your own default search engine — are described below.</p>
 
 <h2>Data We Store</h2>
 <p>Everything below is created by you and stored in your browser via <code>chrome.storage.local</code> and <code>localStorage</code>:</p>
@@ -37,14 +37,15 @@
 <ul>
   <li><strong>storage</strong> — Saves the data listed above on your device and, via Chrome sync, to your own Google account.</li>
   <li><strong>bookmarks</strong> — Read-only. Used <em>only</em> for the optional "Import from Chrome" feature, which copies your existing bookmarks into the dashboard. Your bookmarks are never modified or transmitted anywhere.</li>
+  <li><strong>search</strong> — Lets the command bar run a search using your <em>existing default search engine</em> when you type a query and press Enter. Grid Tab does not change, override, or read your default search engine or your search history.</li>
 </ul>
 
 <h2>Third-Party Requests</h2>
 <ul>
   <li><strong>Google Favicons</strong> — When a bookmark uses an automatic icon, the site's favicon is fetched from <code>www.google.com/s2/favicons</code>. The only information sent is the website's domain name.</li>
-  <li><strong>Web search</strong> — If you type a query in the command bar and press Enter with no match, Grid Tab opens a Google search for that text. Nothing is sent until you press Enter.</li>
+  <li><strong>Web search</strong> — If you type a query in the command bar and press Enter with no match, Grid Tab runs that search using <strong>your browser's own default search engine</strong> via Chrome's Search API. Grid Tab does not choose or change the search engine, and nothing is sent until you press Enter.</li>
 </ul>
-<p>These are the only outbound network requests Grid Tab makes.</p>
+<p>These are the only outbound requests related to Grid Tab.</p>
 
 <h2>Data Sharing</h2>
 <p>Grid Tab does not collect, sell, or share your personal data. There is no Grid Tab server, no advertising, and no third-party analytics or tracking of any kind.</p>
